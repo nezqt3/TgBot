@@ -6,8 +6,9 @@ import { useTelegram } from './hooks/useTelegram';
 import {Route, Routes} from 'react-router-dom'
 import ProductList from './components/ProductList/ProductList';
 import Form from './components/Form/Form';
-const tg = window.Telegram.WebApp
-function App() {
+import Test from './test'
+
+const App = () => {
   const {onToggleButton, tg} = useTelegram()
   useEffect( () => {
     tg.ready()
@@ -16,8 +17,8 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route index element={<ProductList/>}/>
-        <Route path={'form'} element={<Form/>}/>
+        <Route index element={<Test/>}/>
+        <Route path={'/form'} element={<Form/>}/>
       </Routes>
     </div>
   );
