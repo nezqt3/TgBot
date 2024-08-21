@@ -1,7 +1,7 @@
 
 import { useEffect } from 'react';
 import './App.css';
-import Header from '../public/components/Button/Header/Header.js/Header';
+import Header from './Header/Header';
 import { useTelegram } from './hooks/useTelegram';
 const tg = window.Telegram.WebApp
 function App() {
